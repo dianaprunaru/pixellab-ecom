@@ -3,7 +3,11 @@ import Head from "next/head";
 const ContactPage = () => {
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Contact Page</title>
+      </Head>
+
+      <main>hello from next</main>
     </>
   );
 };
