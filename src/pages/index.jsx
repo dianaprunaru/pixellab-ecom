@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 const Home = () => {
   return (
@@ -7,7 +7,7 @@ const Home = () => {
         <title>Homepage</title>
       </Head>
 
-      <main>homepage</main>
+      <main className="text-3xl font-bold underline">homepage</main>
     </>
   );
 };
