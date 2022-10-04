@@ -9,7 +9,7 @@ export const Header = () => {
 
   return (
     <>
-      <section className="flex lg:flex-col lg:h-1/2 items-center py-4 relative justify-between z-10">
+      <section className="flex lg:flex-col h-full items-center lg:py-4 relative justify-between z-10">
         <Link href="/">
           <a title="Home">
             <GiAquarium size="32"></GiAquarium>
@@ -29,34 +29,36 @@ export const Header = () => {
             <CgMenu size="32"></CgMenu>
           )}
         </button>
+
+        <div className="hidden lg:block">
+          <span className="lg:block w-4 h-4 bg-white rounded-full"></span>
+        </div>
       </section>
 
       {menuOpen ? (
         <nav
-          className={`absolute ${
-            menuOpen ? 'top-0' : '-top-full'
-          } left-0 h-screen w-screen text-white bg-neutral-900 `}
+          className={`absolute left-0 -top-full transition-transform transform-gpu ${
+            menuOpen ? 'translate-y-full' : ''
+          }  h-screen w-screen lg:w-screen-1/3 text-white bg-neutral-900 `}
         >
-          <div>
-            <ul>
-              <li>
-                <Link href="/">
-                  <a href="Shop">Shop</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <a title="Home">Home</a>
-                </Link>
-              </li>
+          <ul>
+            <li>
+              <Link href="/">
+                <a href="Shop">Shop</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a title="Home">Home</a>
+              </Link>
+            </li>
 
-              <li>
-                <Link href="/">
-                  <a title="Contact">Contact</a>
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <li>
+              <Link href="/">
+                <a title="Contact">Contact</a>
+              </Link>
+            </li>
+          </ul>
         </nav>
       ) : (
         <></>
