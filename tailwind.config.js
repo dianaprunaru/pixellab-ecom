@@ -12,6 +12,10 @@ module.exports = {
       width: {
         'screen-1/3': '33vw',
       },
+      fontFamily: {
+        display: ['Works Sans'],
+        body: ['Roboto'],
+      },
     },
   },
   plugins: [],

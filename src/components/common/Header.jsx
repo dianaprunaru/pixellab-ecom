@@ -39,9 +39,9 @@ export const Header = () => {
         <nav
           className={`absolute left-0 -top-full transition-transform transform-gpu ${
             menuOpen ? 'translate-y-full' : ''
-          }  h-screen w-screen lg:w-screen-1/3 text-white bg-neutral-900 `}
+          } h-screen w-screen lg:w-screen-1/3 text-white bg-neutral-900 `}
         >
-          <ul>
+          <ul className="flex flex-col w-screen h-screen  text-center align-middle justify-center uppercase leading-20 leading-loose text-3xl font-['Work_Sans']">
             <li>
               <Link href="/">
                 <a href="Shop">Shop</a>

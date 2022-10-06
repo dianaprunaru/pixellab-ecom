@@ -32,6 +32,7 @@ export const ProductGrid = ({ products = [], perRow = 4 }) => {
 
               <section className="mt-8 text-center text-sm">
                 <h1 className="uppercase text-zinc-400 mb-2">{title}</h1>
+
                 <div className="text-zinc-900 font-light">{price}</div>
               </section>
             </article>

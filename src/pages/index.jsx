@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { baseUrl } from '..';
 import { CartControl } from '../components/cart';
-import { ProductGrid, GridControls } from '../components/catalog';
+import { GridControls, ProductGrid } from '../components/catalog';
 import { Layout } from '../layouts';
 
 const Home = () => {
