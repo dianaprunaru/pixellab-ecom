@@ -41,7 +41,7 @@ export const Header = () => {
             menuOpen ? 'translate-y-full' : ''
           } h-screen w-screen lg:w-screen-1/3 text-white bg-neutral-900 `}
         >
-          <ul className="flex flex-col w-screen h-screen  text-center align-middle justify-center uppercase leading-20 leading-loose text-3xl font-['Work_Sans']">
+          <ul className="flex flex-col w-full h-full  text-center align-middle justify-center uppercase leading-20 leading-loose text-3xl font-['Work_Sans']">
             <li>
               <Link href="/">
                 <a href="Shop">Shop</a>
