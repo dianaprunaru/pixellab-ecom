@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { CgMenu } from 'react-icons/cg';
+import { CgFacebook, CgMenu } from 'react-icons/cg';
 import { CgClose } from 'react-icons/cg';
 import { GiAquarium } from 'react-icons/gi';
+import { IoLogoTwitter } from 'react-icons/io';
+import { TiSocialGooglePlus } from 'react-icons/ti';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +33,28 @@ export const Header = () => {
         </button>
 
         <div className="hidden lg:block">
-          <span className="lg:block w-4 h-4 bg-white rounded-full"></span>
+          <span className="lg:block justify-between text-white ">
+            <Link href="/">
+              <a title="Facebook">
+                <CgFacebook size="24" className="mb-4"></CgFacebook>
+              </a>
+            </Link>
+
+            <Link href="/">
+              <a title="Twitter">
+                <IoLogoTwitter size="24" className="mb-4"></IoLogoTwitter>
+              </a>
+            </Link>
+
+            <Link href="/">
+              <a title="Google +">
+                <TiSocialGooglePlus
+                  size="24"
+                  className="mb-4"
+                ></TiSocialGooglePlus>
+              </a>
+            </Link>
+          </span>
         </div>
       </section>
 
