@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { CartControl } from '../components/cart';
+import { CartControl, ContinueShopping } from '../components/cart';
 import { Layout } from '../layouts';
 
 const Cart = () => {
@@ -15,7 +15,10 @@ const Cart = () => {
             <CartControl></CartControl>
           </header>
 
-          <section className="mt-16">cart goes here</section>
+          <section className="mt-16 flex flex-col ">
+            cart goes here
+            <ContinueShopping></ContinueShopping>
+          </section>
         </main>
       </Layout>
     </>

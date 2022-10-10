@@ -1,9 +1,14 @@
 import { css } from '@emotion/css';
-import Image from 'next/image';
 
 export const ProductGrid = ({ products = [], perRow = 4 }) => {
   if (products.length <= 0) {
-    return <>There are no products</>;
+    return (
+      <section className="container px-4 lg:px-0 mx-auto font-['Work_Sans'] flex justify-center text-base">
+        There are no products available. Subscribe to our newsletter for new
+        arrivals notifications 🛍
+        {/* newsletter component */}
+      </section>
+    );
   }
 
   const gridCss = css`

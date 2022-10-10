@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
+import { TfiLayoutGrid4 } from 'react-icons/ti';
+import { TfiViewGrid } from 'react-icons/ti';
+import { CgDisplayGrid } from 'react-icons/cg';
+import { IoMdGrid } from 'react-icons/io';
 
-const buttonClasses = `w-24 h-24 border-l border-zinc-400 justify-center items-center`;
+const buttonClasses = `flex w-24 h-24 border-l border-zinc-400 justify-center items-center`;
 
 // setting a no-op
 export const GridControls = ({ setPerRow = () => {} }) => {
@@ -16,18 +20,17 @@ export const GridControls = ({ setPerRow = () => {} }) => {
 
   return (
     <ul className="flex border border-l-0 border-r-0 border-zinc-400">
-      {itemsPerRow}
       <li>
         <button
           title="One per row"
           className={`${buttonClasses} ${
             itemsPerRow === '1/row' ? 'bg-black text-white' : ''
-          }`}
+          } `}
           onClick={() => {
             setItemsPerRow('1/row');
           }}
         >
-          1
+          <IoMdGrid size="24"></IoMdGrid>
         </button>
       </li>
 
@@ -36,12 +39,12 @@ export const GridControls = ({ setPerRow = () => {} }) => {
           title="Two per row"
           className={`${buttonClasses} ${
             itemsPerRow === '2/row' ? 'bg-black text-white' : ''
-          }`}
+          } `}
           onClick={() => {
             setItemsPerRow('2/row');
           }}
         >
-          2
+          <IoMdGrid size="24"></IoMdGrid>
         </button>
       </li>
 
@@ -50,12 +53,12 @@ export const GridControls = ({ setPerRow = () => {} }) => {
           title="Four per row"
           className={`${buttonClasses} ${
             itemsPerRow === '4/row' ? 'bg-black text-white' : ''
-          }`}
+          } `}
           onClick={() => {
             setItemsPerRow('4/row');
           }}
         >
-          4
+          <IoMdGrid size="24"></IoMdGrid>
         </button>
       </li>
     </ul>

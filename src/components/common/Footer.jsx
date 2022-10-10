@@ -71,7 +71,7 @@ export const Footer = () => {
         </div>
       </section>
 
-      <div className="flex container">
+      <div className="flex ">
         <div className={hrRuleCss}></div>
         <div className={hrIcon}>
           <button
