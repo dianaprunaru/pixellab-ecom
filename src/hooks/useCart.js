@@ -11,7 +11,6 @@ export const useCart = (cartId = 2) => {
       })
       .then((result) => {
         setCart(result);
-        cachedCart = result;
       });
   }, []);
 
