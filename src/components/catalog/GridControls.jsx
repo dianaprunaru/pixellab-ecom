@@ -1,7 +1,4 @@
 import { useEffect, useState } from 'react';
-import { TfiLayoutGrid4 } from 'react-icons/ti';
-import { TfiViewGrid } from 'react-icons/ti';
-import { CgDisplayGrid } from 'react-icons/cg';
 import { IoMdGrid } from 'react-icons/io';
 
 const buttonClasses = `flex w-24 h-24 border-l border-zinc-400 justify-center items-center`;
