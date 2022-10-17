@@ -2,31 +2,16 @@
 
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { baseUrl } from '../..';
 import { CartControl } from '../../components/cart';
 import { Layout } from '../../layouts';
 import { BiLoaderCircle } from 'react-icons/bi';
+import { useProduct } from '../../hooks';
 
 // {product} = props.product
 const ProductPage = () => {
   const router = useRouter();
   const { pid } = router.query;
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    if (pid === undefined) {
-      return;
-    }
-
-    fetch(`${baseUrl}/products/${pid}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((result) => {
-        setProduct(result);
-      });
-  }, [pid]);
+  const { product, status } = useProduct(pid);
 
   if (product === null) {
     return (
@@ -34,6 +19,10 @@ const ProductPage = () => {
         <BiLoaderCircle size="48" className="animate-spin"></BiLoaderCircle>
       </div>
     );
+  }
+
+  if (status === null && status !== '404') {
+    return <span>Product not found</span>;
   }
 
   const { id, title, description, price, image } = product;

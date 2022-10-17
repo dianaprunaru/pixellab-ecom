@@ -1,13 +1,21 @@
 import Link from 'next/link';
+import { useContext } from 'react';
 import { FiShoppingBag } from 'react-icons/fi';
+import { AppContext } from '../../pages/_app';
 
-export const CartControl = ({ cart }) => {
+export const CartControl = () => {
+  const { cart } = useContext(AppContext);
+
+  if (cart === null) {
+    return <></>;
+  }
+
   const { products } = cart;
 
   const cartQty = products.reduce((cartQty, product) => {
     const { quantity } = product;
 
-    cartQty += quantity;
+    cart += quantity;
 
     return cartQty;
   }, 0);

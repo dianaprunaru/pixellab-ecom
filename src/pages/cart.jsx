@@ -1,5 +1,12 @@
 import Head from 'next/head';
-import { CartControl, ContinueShopping } from '../components/cart';
+import {
+  CartControl,
+  CartItems,
+  CartTotals,
+  CartTotatls,
+  CartVoucher,
+  ContinueShopping,
+} from '../components/cart';
 import { useCart } from '../hooks';
 import { Layout } from '../layouts';
 
@@ -22,8 +29,16 @@ const Cart = () => {
             <CartControl cart={cart}></CartControl>
           </header>
 
-          <section className="mt-16 flex flex-col ">
+          <section className="mt-16 grid grid-cols-12 gap-8">
             {cart.id}
+            <div className="col-span-8">
+              <CartItems></CartItems>
+              <CartVoucher></CartVoucher>
+            </div>
+
+            <aside className="col-span-4">
+              <CartTotals></CartTotals>
+            </aside>
             <ContinueShopping></ContinueShopping>
           </section>
         </main>
