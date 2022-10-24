@@ -10,7 +10,7 @@ export const Layout = ({ children }) => {
   const gridCss = css`
     display: grid;
     grid-template-areas: 'header' 'main-area';
-    grid-template-rows: 40px 1fr;
+    grid-template-rows: 60px 1fr;
 
     @media (min-width: 1024px) {
       grid-template-areas:
@@ -40,10 +40,10 @@ export const Layout = ({ children }) => {
 
   const mainAreaCss = css`
     grid-area: main-area;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh; */
+    min-height: 100vh;
   `;
 
   const footerCss = css`

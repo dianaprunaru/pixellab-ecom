@@ -28,10 +28,12 @@ export const CartItems = () => {
 
       <tbody>
         {products.map((product) => {
-          <CartLineItem
-            product={product}
-            key={product.productId}
-          ></CartLineItem>;
+          return (
+            <CartLineItem
+              product={product}
+              key={product.productId}
+            ></CartLineItem>
+          );
         })}
       </tbody>
     </table>

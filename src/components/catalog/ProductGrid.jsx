@@ -7,7 +7,6 @@ export const ProductGrid = ({ products = [], perRow = 4 }) => {
       <section className="container px-4 lg:px-0 mx-auto font-['Work_Sans'] flex justify-center text-base">
         There are no products available. Subscribe to our newsletter for new
         arrivals notifications 🛍
-        {/* newsletter component */}
       </section>
     );
   }

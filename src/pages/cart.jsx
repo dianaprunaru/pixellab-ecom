@@ -3,7 +3,6 @@ import {
   CartControl,
   CartItems,
   CartTotals,
-  CartTotatls,
   CartVoucher,
   ContinueShopping,
 } from '../components/cart';
@@ -26,11 +25,13 @@ const Cart = () => {
       <Layout>
         <main className="container px-4 lg:px-0 mx-auto">
           <header className="flex justify-between text-zinc-400">
+            <div></div>
+
             <CartControl cart={cart}></CartControl>
           </header>
 
           <section className="mt-16 grid grid-cols-12 gap-8">
-            {cart.id}
+            {/* {cart.id} */}
             <div className="col-span-8">
               <CartItems></CartItems>
               <CartVoucher></CartVoucher>
@@ -39,8 +40,9 @@ const Cart = () => {
             <aside className="col-span-4">
               <CartTotals></CartTotals>
             </aside>
-            <ContinueShopping></ContinueShopping>
           </section>
+
+          <ContinueShopping></ContinueShopping>
         </main>
       </Layout>
     </>

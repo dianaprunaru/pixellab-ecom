@@ -37,10 +37,11 @@ export const Pagination = ({ products, setPaginatedProducts }) => {
         .fill('_')
         .map((_, index) => {
           const i = index + 1;
+
           return (
             <li
               key={index}
-              className={`${index + 1 === page ? 'font-bold' : ''}`}
+              className={`${i === page ? 'font-bold' : ''}`}
               onClick={() => {
                 if (i === page) {
                   return;

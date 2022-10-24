@@ -32,7 +32,7 @@ export const CartLineItem = ({ product }) => {
         </Link>
 
         <Link href={`/products/${id}`}>
-          <a title={title}></a>
+          <a title={title}>{title}</a>
         </Link>
       </td>
       <td></td>
