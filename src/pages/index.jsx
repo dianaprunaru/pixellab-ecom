@@ -32,12 +32,7 @@ const Home = () => {
             ></ProductGrid>
           </section>
 
-          <section>
-            <Pagination
-              products={products}
-              setPaginatedProducts={setPaginatedProducts}
-            ></Pagination>
-          </section>
+          <section></section>
         </main>
       </Layout>
     </>

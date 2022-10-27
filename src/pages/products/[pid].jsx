@@ -6,6 +6,8 @@ import { CartControl, ContinueShopping } from '../../components/cart';
 import { Layout } from '../../layouts';
 import { BiLoaderCircle } from 'react-icons/bi';
 import { useProduct } from '../../hooks';
+import Image from 'next/image';
+import { AddToCart } from '../../components/catalog';
 
 // {product} = props.product
 const ProductPage = () => {
@@ -46,11 +48,14 @@ const ProductPage = () => {
 
           <section className="mt-16 container px-4 mx-auto lg:px-0 grid grid-cols-12 gap-8">
             <div className="col-start-1 col-span-5">
-              <img
+              <Image
                 alt={`Image of ${title}`}
                 src={image}
                 className="block w-full"
-              ></img>
+                width={650}
+                height={650}
+                objectFit="contain"
+              ></Image>
             </div>
 
             <header className="col-start-7 col-span-6 pt-12">
@@ -64,16 +69,7 @@ const ProductPage = () => {
               </div>
 
               <div className="mt-12">
-                <button
-                  className="bg-black text-white uppercase font-medium text-sm py-3 px-6 hover:bg-amber-800 transition-colors"
-                  title={`Add ${title} to cart`}
-                  type="button"
-                  onClick={() => {
-                    alert(id);
-                  }}
-                >
-                  Add to cart
-                </button>
+                <AddToCart product={product}></AddToCart>
               </div>
             </header>
           </section>
